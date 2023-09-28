@@ -1,0 +1,23 @@
+#include <iostream>
+#include<ctime>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0)); 
+    int random=rand()%100+20;
+    int guess=0;
+    int count=0;
+    do{
+        count++;
+        cout<<"Enter your guess:";
+        cin>>guess;
+        if(guess==random)
+            cout<<"congrats right guess after"<<count<<endl;
+        else if(guess<random)
+            cout<<"You entered a lower number"<<endl;
+        else
+            cout<<"You entered a higher number"<<endl;
+    }while(guess!=random);
+}
